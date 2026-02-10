@@ -20,8 +20,13 @@ export default function Hero3D() {
         camera.position.z = 6
 
         const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true })
-        renderer.setSize(window.innerWidth, window.innerHeight)
         renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2))
+
+        // Initial size
+        const { clientWidth, clientHeight } = containerRef.current
+        renderer.setSize(clientWidth, clientHeight)
+        camera.aspect = clientWidth / clientHeight
+        camera.updateProjectionMatrix()
 
         // Check if canvas already exists to avoid duplication on strict mode re-renders
         const existingCanvas = containerRef.current.querySelector('canvas')
@@ -52,7 +57,7 @@ export default function Hero3D() {
         const geometry0 = new THREE.BufferGeometry()
         const geometry1 = new THREE.BufferGeometry()
         const pos0 = [], pos1 = []
-        const count = 1200
+        const count = 10000
 
         for (let i = 0; i < count; i++) {
             const x = (Math.random() - 0.5) * 25
@@ -74,9 +79,22 @@ export default function Hero3D() {
         scene.add(particles0)
         scene.add(particles1)
 
-        // Animation Loop
+        // Animation Vars
         let targetX = 0, targetY = 0
         let animationId: number
+
+        // Resize Observer
+        const resizeObserver = new ResizeObserver((entries) => {
+            for (const entry of entries) {
+                const { width, height } = entry.contentRect
+                if (width && height) {
+                    camera.aspect = width / height
+                    camera.updateProjectionMatrix()
+                    renderer.setSize(width, height)
+                }
+            }
+        })
+        resizeObserver.observe(containerRef.current)
 
         const animate = () => {
             animationId = requestAnimationFrame(animate)
@@ -113,15 +131,20 @@ export default function Hero3D() {
 
         // Event Listeners
         const handleMove = (x: number, y: number) => {
-            if (!cardRef.current) return
-            const rotY = ((x - window.innerWidth / 2) / window.innerWidth) * 40
-            const rotX = ((y - window.innerHeight / 2) / window.innerHeight) * -40
+            if (!containerRef.current || !cardRef.current) return
+
+            const rect = containerRef.current.getBoundingClientRect()
+            const relX = x - rect.left
+            const relY = y - rect.top
+
+            const rotY = ((relX - rect.width / 2) / rect.width) * 40
+            const rotX = ((relY - rect.height / 2) / rect.height) * -40
 
             cardRef.current.style.setProperty('--rotate-x', `${rotX}deg`)
             cardRef.current.style.setProperty('--rotate-y', `${rotY}deg`)
 
-            targetX = x * 0.0005
-            targetY = y * 0.0005
+            targetX = (relX - rect.width / 2) * 0.005
+            targetY = (relY - rect.height / 2) * 0.005
         }
 
         const mouseMoveHandler = (e: MouseEvent) => handleMove(e.clientX, e.clientY)
@@ -130,21 +153,15 @@ export default function Hero3D() {
                 handleMove(e.touches[0].clientX, e.touches[0].clientY)
             }
         }
-        const resizeHandler = () => {
-            camera.aspect = window.innerWidth / window.innerHeight
-            camera.updateProjectionMatrix()
-            renderer.setSize(window.innerWidth, window.innerHeight)
-        }
 
         window.addEventListener('mousemove', mouseMoveHandler)
         window.addEventListener('touchmove', touchMoveHandler)
-        window.addEventListener('resize', resizeHandler)
 
         // Cleanup
         return () => {
+            resizeObserver.disconnect()
             window.removeEventListener('mousemove', mouseMoveHandler)
             window.removeEventListener('touchmove', touchMoveHandler)
-            window.removeEventListener('resize', resizeHandler)
             cancelAnimationFrame(animationId)
             if (containerRef.current && renderer.domElement) {
                 // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -157,6 +174,7 @@ export default function Hero3D() {
         }
     }, [])
 
+
     // Icon Carousel Interval
     useEffect(() => {
         const interval = setInterval(() => {
@@ -166,36 +184,36 @@ export default function Hero3D() {
     }, [])
 
     return (
-        <section className="relative w-full h-screen overflow-hidden bg-[#020617] font-sans">
-            <div id="canvas-container" ref={containerRef} className="absolute inset-0 z-0" />
+        <div ref={containerRef} className="relative w-full h-full overflow-hidden bg-[#020617] font-sans rounded-2xl">
+            {/* Canvas is appended by Three.js */}
 
             <div
                 ref={cardRef}
-                className="content-overlay absolute top-1/2 left-1/2 w-[90%] max-w-[400px] p-10 text-center text-white z-10 bg-slate-900/70 rounded-3xl backdrop-blur-md border border-sky-400/40 shadow-2xl transition-transform duration-100 ease-out"
+                className="content-overlay absolute top-1/2 left-1/2 w-[85%] max-w-[350px] p-6 md:p-8 text-center text-white z-10 bg-slate-900/70 rounded-3xl backdrop-blur-md border border-sky-400/40 shadow-2xl transition-transform duration-100 ease-out flex flex-col items-center justify-center"
                 style={{
                     transform: 'translate(-50%, -50%) rotateX(var(--rotate-x, 0deg)) rotateY(var(--rotate-y, 0deg))',
                     transformStyle: 'preserve-3d',
                     perspective: '1000px'
                 }}
             >
-                <div className="icon-carousel h-20 mb-5 flex justify-center items-center relative">
-                    <BrainCircuit className={`absolute w-16 h-16 text-sky-400 transition-all duration-700 ${activeIcon === 0 ? 'opacity-100 scale-100 translate-z-12' : 'opacity-0 scale-50 translate-z-5'}`} />
-                    <Monitor className={`absolute w-16 h-16 text-sky-400 transition-all duration-700 ${activeIcon === 1 ? 'opacity-100 scale-100 translate-z-12' : 'opacity-0 scale-50 translate-z-5'}`} />
-                    <Code2 className={`absolute w-16 h-16 text-sky-400 transition-all duration-700 ${activeIcon === 2 ? 'opacity-100 scale-100 translate-z-12' : 'opacity-0 scale-50 translate-z-5'}`} />
-                    <Cpu className={`absolute w-16 h-16 text-sky-400 transition-all duration-700 ${activeIcon === 3 ? 'opacity-100 scale-100 translate-z-12' : 'opacity-0 scale-50 translate-z-5'}`} />
+                <div className="icon-carousel h-16 mb-4 flex justify-center items-center relative w-full">
+                    <BrainCircuit className={`absolute w-12 h-12 text-sky-400 transition-all duration-700 ${activeIcon === 0 ? 'opacity-100 scale-100 translate-z-12' : 'opacity-0 scale-50 translate-z-5'}`} />
+                    <Monitor className={`absolute w-12 h-12 text-sky-400 transition-all duration-700 ${activeIcon === 1 ? 'opacity-100 scale-100 translate-z-12' : 'opacity-0 scale-50 translate-z-5'}`} />
+                    <Code2 className={`absolute w-12 h-12 text-sky-400 transition-all duration-700 ${activeIcon === 2 ? 'opacity-100 scale-100 translate-z-12' : 'opacity-0 scale-50 translate-z-5'}`} />
+                    <Cpu className={`absolute w-12 h-12 text-sky-400 transition-all duration-700 ${activeIcon === 3 ? 'opacity-100 scale-100 translate-z-12' : 'opacity-0 scale-50 translate-z-5'}`} />
                 </div>
 
-                <h1 className="text-3xl font-bold m-0 bg-gradient-to-r from-sky-400 via-indigo-400 to-sky-400 bg-[length:200%_auto] bg-clip-text text-transparent animate-shine translate-z-8">
+                <h1 className="text-xl md:text-2xl font-bold m-0 bg-gradient-to-r from-sky-400 via-indigo-400 to-sky-400 bg-[length:200%_auto] bg-clip-text text-transparent animate-shine translate-z-8">
                     هندسة الحلول الذكية
                 </h1>
-                <p className="text-lg text-slate-400 mt-4 translate-z-5">
+                <p className="text-sm md:text-base text-slate-400 mt-3 translate-z-5">
                     تحويل الأفكار المعقدة إلى واقع رقمي بسيط.
                 </p>
             </div>
 
-            <div className="absolute bottom-5 left-1/2 -translate-x-1/2 text-sky-400/40 text-xs tracking-[2px] z-20">
+            <div className="absolute bottom-4 left-1/2 -translate-x-1/2 text-sky-400/40 text-[10px] tracking-[2px] z-20">
                 تفاعل ثلاثي الأبعاد • 010101
             </div>
-        </section>
+        </div>
     )
 }

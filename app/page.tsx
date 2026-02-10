@@ -40,15 +40,14 @@ export default function Page() {
 
   const MORE_PROJECTS: ProjectCard[] = content.moreProjects.projects.map(p => ({
     id: p.id,
-    image: `/images/project-${p.id}.jpg`,
+    image: (p as any).imagePath || `/images/project-${p.id}.jpg`,
     title: p.title
   }))
 
-  const sliderKeys = Object.keys(content.slider) as (keyof typeof content.slider)[]
-  const SLIDER_ITEMS: SliderItem[] = sliderKeys.map(key => ({
-    id: key,
-    image: `/images/slider-${key}.jpg`,
-    label: content.slider[key]
+  const SLIDER_ITEMS: SliderItem[] = (content.slider as unknown as string[]).map((img, index) => ({
+    id: index.toString(),
+    image: img,
+    label: ""
   }))
 
   return (
@@ -64,16 +63,20 @@ export default function Page() {
           availableForWork={AUTHOR.availableForWork}
         />
 
-        <div className="relative">
-          <Hero3D />
-        </div>
+        <section className="relative mx-auto mt-8 max-w-[850px] px-4">
+          <div className="overflow-hidden rounded-xl bg-secondary shadow-xl">
+            <div className="relative aspect-[4/3] w-full lg:aspect-[16/9]">
+              <Hero3D />
+            </div>
+          </div>
+        </section>
 
         <ShotDescription paragraphs={hero.description} />
 
         <StudioProfile
           studioName={STUDIO.name}
           tagline={STUDIO.tagline}
-          logoText={STUDIO.logoText}
+          avatar="/images/Logo.png"
         />
 
         <MoreProjects

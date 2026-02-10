@@ -56,13 +56,10 @@ export default function MoreProjects({
                 fill
                 className="object-cover transition-transform duration-300 group-hover:scale-105"
               />
-              {/* Hover Overlay */}
-              <div className="absolute inset-0 flex items-end bg-gradient-to-t from-foreground/60 to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100">
-                <span className="p-4 text-sm font-medium text-primary-foreground">
-                  {project.title}
-                </span>
-              </div>
             </div>
+            <h3 className="mt-3 text-sm font-bold text-foreground text-center group-hover:text-primary transition-colors leading-relaxed">
+              {project.title}
+            </h3>
           </Link>
         ))}
       </div>

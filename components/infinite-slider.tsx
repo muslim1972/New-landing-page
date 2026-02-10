@@ -35,9 +35,7 @@ export default function InfiniteSlider({ items }: InfiniteSliderProps) {
                 className="object-cover transition-transform duration-300 group-hover:scale-110"
               />
             </div>
-            <p className="mt-2 text-xs font-medium text-foreground lg:text-sm">
-              {item.label}
-            </p>
+
           </Link>
         ))}
       </div>

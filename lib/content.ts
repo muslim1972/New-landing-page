@@ -36,8 +36,8 @@ export const CONTENT = {
                 follow: "Shamli",
             },
             description: [
-                "Hey all. For this week's Handsome Challenge series, I took on the \"Remaking A Marketing Experience,\" challenge.",
-                "Real pixels attached. Feedback is welcome. And thanks!",
+                "Welcome to the realm of the smartest apps, where no mission is impossible.",
+                "We accepted the challenge, and by the grace of God, we have succeeded.",
             ],
             stats: {
                 likes: "2,342",
@@ -49,22 +49,22 @@ export const CONTENT = {
             title: "More by",
             viewProfile: "View profile",
             projects: [
-                { id: "1", title: "Ice Cream App Concept" },
-                { id: "2", title: "Culture Filter UI" },
-                { id: "3", title: "Design That Makes Lives Better" },
-                { id: "4", title: "Travel Dashboard" },
+                { id: "1", title: "Professional Shopping Apps", imagePath: "/images/haja.png" },
+                { id: "2", title: "World-Class Video & Photo Apps" },
+                { id: "3", title: "Our Design Speaks" },
+                { id: "4", title: "We Innovate, Not Imitate", imagePath: "/images/shamli.png" },
             ]
         },
-        slider: {
-            branding: "Branding",
-            illustration: "Illustration",
-            typography: "Typography",
-            print: "Print",
-            mobile: "Mobile",
-            product: "Product Design",
-            animation: "Animation",
-            webdesign: "Web Design",
-        },
+        slider: [
+            "/images/slide (1).png",
+            "/images/slide (2).png",
+            "/images/slide (3).png",
+            "/images/slide (4).png",
+            "/images/slide (5).png",
+            "/images/slide (6).png",
+            "/images/slide (7).png",
+            "/images/slide (8).png",
+        ],
         footer: {
             copyright: "© 2026 Dribbble. All rights reserved.",
             mainLinks: [
@@ -90,6 +90,43 @@ export const CONTENT = {
                 { label: "Places", href: "#" },
                 { label: "Resources", href: "#" },
             ]
+        }
+        ,
+        apps: {
+            title: "Digital Innovation Portal",
+            subtitle: "Discover an integrated ecosystem of applications designed to elevate efficiency and change the game.",
+            items: {
+                shamil: {
+                    title: "Shamil App",
+                    subtitle: "Integrated Management System",
+                    description: "Comprehensive platform for managing resources, employees, and records with high precision.",
+                },
+                inftele: {
+                    title: "InfTeleKarbala",
+                    subtitle: "Telecom Management",
+                    description: "Advanced technical solutions for managing telecommunications infrastructure.",
+                },
+                security: {
+                    title: "Max Security",
+                    subtitle: "End-to-End Encryption",
+                },
+                performance: {
+                    title: "High Performance",
+                    subtitle: "Fast Response Time",
+                },
+                future: {
+                    title: "Future Project",
+                    subtitle: "Coming Soon",
+                },
+                ad: {
+                    title: "Ad Space",
+                    subtitle: "Book your spot here",
+                }
+            },
+            stats: {
+                users: "+50K Active Users",
+                addIdea: "Add your idea"
+            }
         }
     },
     ar: {
@@ -129,8 +166,8 @@ export const CONTENT = {
                 follow: "شملي",
             },
             description: [
-                "مرحباً بالجميع. في سلسلة تحدي الوسامة لهذا الأسبوع، قبلت تحدي \"إعادة صنع تجربة تسويقية\".",
-                "البيكسلات الحقيقية مرفقة. الملاحظات مرحب بها. وشكراً لكم!",
+                "مرحبا بالجميع في فضاء التطبيقات الاذكى . والتي لن تعيقها مهمة مستحيلة",
+                "قبلنا التحدي وبفضل الله ناجحون",
             ],
             stats: {
                 likes: "٢,٣٤٢",
@@ -142,22 +179,22 @@ export const CONTENT = {
             title: "المزيد من",
             viewProfile: "عرض الملف الشخصي",
             projects: [
-                { id: "1", title: "مفهوم تطبيق الآيس كريم" },
-                { id: "2", title: "واجهة فلتر الثقافة" },
-                { id: "3", title: "تصميم يجعل الحياة أفضل" },
-                { id: "4", title: "لوحة تحكم السفر" },
+                { id: "1", title: "تطبيقات تسوق محترفة", imagePath: "/images/haja.png" },
+                { id: "2", title: "تطبيقات للتعامل مع الفيديو والصور تنافس التطبيقات العالمية" },
+                { id: "3", title: "التصميم لدينا يتحدث" },
+                { id: "4", title: "لا نقلد بل نبتكر", imagePath: "/images/shamli.png" },
             ]
         },
-        slider: {
-            branding: "هوية بصرية",
-            illustration: "رسم توضيحي",
-            typography: "تايبوغرافيا",
-            print: "طباعة",
-            mobile: "تطبيقات موبايل",
-            product: "تصميم منتجات",
-            animation: "تحريك",
-            webdesign: "تصميم مواقع",
-        },
+        slider: [
+            "/images/slide (1).png",
+            "/images/slide (2).png",
+            "/images/slide (3).png",
+            "/images/slide (4).png",
+            "/images/slide (5).png",
+            "/images/slide (6).png",
+            "/images/slide (7).png",
+            "/images/slide (8).png",
+        ],
         footer: {
             copyright: "© ٢٠٢٦ دريببل. جميع الحقوق محفوظة.",
             mainLinks: [
@@ -183,6 +220,43 @@ export const CONTENT = {
                 { label: "أماكن", href: "#" },
                 { label: "مصادر", href: "#" },
             ]
+        }
+        ,
+        apps: {
+            title: "بوابة الإبداع الرقمي",
+            subtitle: "اكتشف نظاماً بيئياً متكاملاً من التطبيقات المصممة لرفع الكفاءة وتغيير قواعد اللعبة.",
+            items: {
+                shamil: {
+                    title: "شامل آب",
+                    subtitle: "نظام إدارة متكامل",
+                    description: "منصة شاملة لإدارة الموارد، الموظفين، والسجلات بدقة عالية.",
+                },
+                inftele: {
+                    title: "InfTeleKarbala",
+                    subtitle: "إدارة الاتصالات",
+                    description: "حلول تقنية متقدمة لإدارة البنية التحتية للاتصالات.",
+                },
+                security: {
+                    title: "حماية قصوى",
+                    subtitle: "تشفير End-to-End",
+                },
+                performance: {
+                    title: "أداء فائق",
+                    subtitle: "سرعة استجابة عالية",
+                },
+                future: {
+                    title: "مشروع قادم",
+                    subtitle: "قريباً",
+                },
+                ad: {
+                    title: "مساحة إعلانية",
+                    subtitle: "احجز مكانك هنا",
+                }
+            },
+            stats: {
+                users: "+50 ألف مستخدم نشط",
+                addIdea: "أضف فكرتك"
+            }
         }
     }
 }

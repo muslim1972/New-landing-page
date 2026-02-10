@@ -4,12 +4,12 @@ interface ShotDescriptionProps {
 
 export default function ShotDescription({ paragraphs }: ShotDescriptionProps) {
   return (
-    <section className="mx-auto max-w-[720px] px-4 py-12 lg:py-16">
-      <div className="space-y-4">
+    <section className="mx-auto max-w-[850px] px-4 py-8 lg:py-12">
+      <div className="space-y-6 text-center">
         {paragraphs.map((text) => (
           <p
             key={text.slice(0, 30)}
-            className="text-base leading-relaxed text-foreground lg:text-lg"
+            className="text-xl leading-relaxed text-foreground/90 lg:text-2xl font-serif font-medium"
           >
             {text}
           </p>
