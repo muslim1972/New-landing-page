@@ -6,7 +6,7 @@ export const CONTENT = {
                 {
                     label: "Apps",
                     hasDropdown: true,
-                    dropdownItems: ["App 1 (Beta)", "App 2 (Beta)", "App 3 (Beta)", "App 4 (Beta)", "App 5 (Beta)"]
+                    dropdownItems: ["ShamilChat", "App 2 (Beta)", "App 3 (Beta)", "App 4 (Beta)", "App 5 (Beta)"]
                 },
                 {
                     label: "Download",
@@ -66,7 +66,7 @@ export const CONTENT = {
             "/images/slide (8).png",
         ],
         footer: {
-            copyright: "© 2026 Dribbble. All rights reserved.",
+            copyright: "© 2026 Shamil App. All rights reserved.",
             mainLinks: [
                 { label: "For designers", href: "#" },
                 { label: "Hire talent", href: "#" },
@@ -82,14 +82,7 @@ export const CONTENT = {
                 { label: "Privacy", href: "#" },
                 { label: "Cookies", href: "#" },
             ],
-            bottomRightLinks: [
-                { label: "Jobs", href: "#" },
-                { label: "Designers", href: "#" },
-                { label: "Freelancers", href: "#" },
-                { label: "Tags", href: "#" },
-                { label: "Places", href: "#" },
-                { label: "Resources", href: "#" },
-            ]
+            bottomRightLinks: []
         }
         ,
         apps: {
@@ -136,7 +129,7 @@ export const CONTENT = {
                 {
                     label: "التطبيقات",
                     hasDropdown: true,
-                    dropdownItems: ["تطبيق 1 (تجريبي)", "تطبيق 2 (تجريبي)", "تطبيق 3 (تجريبي)", "تطبيق 4 (تجريبي)", "تطبيق 5 (تجريبي)"]
+                    dropdownItems: ["ShamilChat", "تطبيق 2 (تجريبي)", "تطبيق 3 (تجريبي)", "تطبيق 4 (تجريبي)", "تطبيق 5 (تجريبي)"]
                 },
                 {
                     label: "تحميل",
@@ -196,7 +189,7 @@ export const CONTENT = {
             "/images/slide (8).png",
         ],
         footer: {
-            copyright: "© ٢٠٢٦ دريببل. جميع الحقوق محفوظة.",
+            copyright: "© ٢٠٢٦ شامل آب . جميع الحقوق محفوظة.",
             mainLinks: [
                 { label: "للمصممين", href: "#" },
                 { label: "توظيف مواهب", href: "#" },
@@ -212,14 +205,7 @@ export const CONTENT = {
                 { label: "الخصوصية", href: "#" },
                 { label: "ملفات تعريف الارتباط", href: "#" },
             ],
-            bottomRightLinks: [
-                { label: "وظائف", href: "#" },
-                { label: "مصممون", href: "#" },
-                { label: "مستقلون", href: "#" },
-                { label: "وسوم", href: "#" },
-                { label: "أماكن", href: "#" },
-                { label: "مصادر", href: "#" },
-            ]
+            bottomRightLinks: []
         }
         ,
         apps: {

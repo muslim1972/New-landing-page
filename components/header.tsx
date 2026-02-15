@@ -79,12 +79,22 @@ export default function Header() {
                 <div className="absolute top-full left-0 z-50 hidden w-48 pt-2 group-hover:block rtl:right-0 rtl:left-auto">
                   <div className="rounded-xl border border-border bg-background p-1 shadow-lg backdrop-blur-sm">
                     {item.dropdownItems.map((subItem, index) => (
-                      <button
-                        key={index}
-                        className="w-full rounded-lg px-3 py-2 text-start text-sm text-foreground hover:bg-secondary"
-                      >
-                        {subItem}
-                      </button>
+                      subItem === "ShamilChat" ? (
+                        <Link
+                          key={index}
+                          href="/shamil-chat"
+                          className="block w-full rounded-lg px-3 py-2 text-start text-sm text-foreground hover:bg-secondary"
+                        >
+                          {subItem}
+                        </Link>
+                      ) : (
+                        <button
+                          key={index}
+                          className="w-full rounded-lg px-3 py-2 text-start text-sm text-foreground hover:bg-secondary"
+                        >
+                          {subItem}
+                        </button>
+                      )
                     ))}
                   </div>
                 </div>
@@ -142,9 +152,20 @@ export default function Header() {
                   <div className={`overflow-hidden transition-all duration-300 ease-in-out ${activeMobileDropdown === item.label ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'}`}>
                     <div className="flex flex-col gap-1 px-4 pb-2 rtl:pr-4 rtl:pl-0 ltr:pl-4 ltr:pr-0 border-l border-border rtl:border-l-0 rtl:border-r">
                       {item.dropdownItems.map((subItem, index) => (
-                        <button key={index} className="py-2 text-start text-sm text-muted-foreground hover:text-foreground">
-                          {subItem}
-                        </button>
+                        subItem === "ShamilChat" ? (
+                          <Link
+                            key={index}
+                            href="/shamil-chat"
+                            className="block py-2 text-start text-sm text-muted-foreground hover:text-foreground"
+                            onClick={() => setIsMobileMenuOpen(false)}
+                          >
+                            {subItem}
+                          </Link>
+                        ) : (
+                          <button key={index} className="py-2 text-start text-sm text-muted-foreground hover:text-foreground">
+                            {subItem}
+                          </button>
+                        )
                       ))}
                     </div>
                   </div>
