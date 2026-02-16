@@ -25,7 +25,7 @@ export default function ShamilChatPage() {
                 subtitle: "Built for those who demand excellence.",
                 items: [
                     { icon: Shield, title: "Unbreakable Security", desc: "Every message, call, and file is end-to-end encrypted. Only you and the recipient can read them." },
-                    { icon: Video, title: "HD Video Calls", desc: "Connect with friends and family in 4K clarity, even on low-bandwidth networks." },
+                    { icon: Video, title: "HD Video Calls", badge: "Coming Very Soon ...", desc: "Connect with friends and family in 4K clarity, even on low-bandwidth networks." },
                     { icon: Users, title: "Super Groups", desc: "Create groups with up to 200,000 members. Admin tools, precise controls, and more." },
                     { icon: Share2, title: "Unlimited Sharing", desc: "Send media and files of any type and size. Your history is securely stored in the cloud." }
                 ]
@@ -53,7 +53,7 @@ export default function ShamilChatPage() {
                 subtitle: "صُمم لمن يطلب التميز.",
                 items: [
                     { icon: Shield, title: "حماية غير قابلة للكسر", desc: "كل رسالة، مكالمة، وملف مشفر من طرف إلى طرف. لا أحد سواك والمستلم يمكنه قراءتها." },
-                    { icon: Video, title: "مكالمات فيديو HD", desc: "تواصل مع الأصدقاء والعائلة بوضوح 4K، حتى على الشبكات الضعيفة." },
+                    { icon: Video, title: "مكالمات فيديو HD", badge: "قريباً جداً ...", desc: "تواصل مع الأصدقاء والعائلة بوضوح 4K، حتى على الشبكات الضعيفة." },
                     { icon: Users, title: "مجموعات فائقة", desc: "أنشئ مجموعات تضم حتى 200,000 عضو. أدوات مشرفين وتحكم دقيق." },
                     { icon: Share2, title: "مشاركة بلا حدود", desc: "أرسل الوسائط والملفات بأي نوع وحجم. سجلك محفوظ بأمان في السحابة." }
                 ]
@@ -169,9 +169,16 @@ export default function ShamilChatPage() {
 
                         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
                             {t.features.items.map((feature, idx) => (
-                                <div key={idx} className="group p-6 rounded-2xl bg-background border border-border/50 hover:border-primary/50 transition-all hover:shadow-lg hover:-translate-y-1">
-                                    <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center mb-4 group-hover:bg-primary group-hover:text-primary-foreground transition-colors">
-                                        <feature.icon className="w-6 h-6" />
+                                <div key={idx} className="group p-6 rounded-2xl bg-background border border-border/50 hover:border-primary/50 transition-all hover:shadow-lg hover:-translate-y-1 relative">
+                                    <div className="flex justify-between items-start mb-4">
+                                        <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center group-hover:bg-primary group-hover:text-primary-foreground transition-colors">
+                                            <feature.icon className="w-6 h-6" />
+                                        </div>
+                                        {feature.badge && (
+                                            <span className="px-2 py-0.5 rounded-full bg-primary/10 text-primary text-xs font-bold animate-pulse">
+                                                {feature.badge}
+                                            </span>
+                                        )}
                                     </div>
                                     <h3 className="text-xl font-bold mb-2">{feature.title}</h3>
                                     <p className="text-sm text-muted-foreground leading-relaxed">{feature.desc}</p>
@@ -189,19 +196,21 @@ export default function ShamilChatPage() {
                     </div>
 
                     {/* Marquee/Scroll */}
-                    <div className="flex gap-6 overflow-x-auto pb-8 snap-x px-4 no-scrollbar lg:justify-center lg:flex-wrap">
-                        {[2, 3, 4, 5, 6].map((num) => (
-                            <div key={num} className="snap-center shrink-0 w-[240px] md:w-[280px] rounded-3xl overflow-hidden shadow-xl border border-border/50 transition-transform hover:scale-105">
-                                <div className="relative aspect-[9/19]">
-                                    <Image
-                                        src={`/images/shamil-chat/${num}.jpg`}
-                                        alt={`Screen ${num}`}
-                                        fill
-                                        className="object-cover"
-                                    />
+                    <div className="w-full inline-flex flex-nowrap overflow-hidden [mask-image:_linear-gradient(to_right,transparent_0,_black_128px,_black_calc(100%-128px),transparent_100%)] py-10" dir="ltr">
+                        <div className="flex items-center gap-6 animate-infinite-scroll">
+                            {[...[2, 3, 4, 5, 6], ...[2, 3, 4, 5, 6]].map((num, idx) => (
+                                <div key={idx} className="shrink-0 w-[240px] md:w-[280px] rounded-3xl overflow-hidden shadow-xl border border-border/50 transition-transform hover:scale-105">
+                                    <div className="relative aspect-[9/19]">
+                                        <Image
+                                            src={`/images/shamil-chat/${num}.jpg`}
+                                            alt={`Screen ${num}`}
+                                            fill
+                                            className="object-cover"
+                                        />
+                                    </div>
                                 </div>
-                            </div>
-                        ))}
+                            ))}
+                        </div>
                     </div>
                 </section>
 

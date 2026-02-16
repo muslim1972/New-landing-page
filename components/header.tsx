@@ -87,6 +87,30 @@ export default function Header() {
                         >
                           {subItem}
                         </Link>
+                      ) : subItem === "InfTeleKarbala" ? (
+                        <Link
+                          key={index}
+                          href="/inftelekarbala"
+                          className="block w-full rounded-lg px-3 py-2 text-start text-sm text-foreground hover:bg-secondary"
+                        >
+                          {subItem}
+                        </Link>
+                      ) : subItem === "ShaGram" ? (
+                        <Link
+                          key={index}
+                          href="/shagram"
+                          className="block w-full rounded-lg px-3 py-2 text-start text-sm text-foreground hover:bg-secondary"
+                        >
+                          {subItem}
+                        </Link>
+                      ) : subItem === "ShamaTube" ? (
+                        <Link
+                          key={index}
+                          href="/shamatube"
+                          className="block w-full rounded-lg px-3 py-2 text-start text-sm text-foreground hover:bg-secondary"
+                        >
+                          {subItem}
+                        </Link>
                       ) : (
                         <button
                           key={index}
@@ -156,6 +180,33 @@ export default function Header() {
                           <Link
                             key={index}
                             href="/shamil-chat"
+                            className="block py-2 text-start text-sm text-muted-foreground hover:text-foreground"
+                            onClick={() => setIsMobileMenuOpen(false)}
+                          >
+                            {subItem}
+                          </Link>
+                        ) : subItem === "InfTeleKarbala" ? (
+                          <Link
+                            key={index}
+                            href="/inftelekarbala"
+                            className="block py-2 text-start text-sm text-muted-foreground hover:text-foreground"
+                            onClick={() => setIsMobileMenuOpen(false)}
+                          >
+                            {subItem}
+                          </Link>
+                        ) : subItem === "ShaGram" ? (
+                          <Link
+                            key={index}
+                            href="/shagram"
+                            className="block py-2 text-start text-sm text-muted-foreground hover:text-foreground"
+                            onClick={() => setIsMobileMenuOpen(false)}
+                          >
+                            {subItem}
+                          </Link>
+                        ) : subItem === "ShamaTube" ? (
+                          <Link
+                            key={index}
+                            href="/shamatube"
                             className="block py-2 text-start text-sm text-muted-foreground hover:text-foreground"
                             onClick={() => setIsMobileMenuOpen(false)}
                           >

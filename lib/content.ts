@@ -6,7 +6,7 @@ export const CONTENT = {
                 {
                     label: "Apps",
                     hasDropdown: true,
-                    dropdownItems: ["ShamilChat", "App 2 (Beta)", "App 3 (Beta)", "App 4 (Beta)", "App 5 (Beta)"]
+                    dropdownItems: ["ShamilChat", "InfTeleKarbala", "ShaGram", "ShamaTube", "App 5 (Beta)"]
                 },
                 {
                     label: "Download",
@@ -129,7 +129,7 @@ export const CONTENT = {
                 {
                     label: "التطبيقات",
                     hasDropdown: true,
-                    dropdownItems: ["ShamilChat", "تطبيق 2 (تجريبي)", "تطبيق 3 (تجريبي)", "تطبيق 4 (تجريبي)", "تطبيق 5 (تجريبي)"]
+                    dropdownItems: ["ShamilChat", "InfTeleKarbala", "ShaGram", "ShamaTube", "تطبيق 5 (تجريبي)"]
                 },
                 {
                     label: "تحميل",
