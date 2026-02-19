@@ -111,6 +111,14 @@ export default function Header() {
                         >
                           {subItem}
                         </Link>
+                      ) : subItem === "ShamilArticles" ? (
+                        <Link
+                          key={index}
+                          href="/shamil-articles"
+                          className="block w-full rounded-lg px-3 py-2 text-start text-sm text-foreground hover:bg-secondary"
+                        >
+                          {subItem}
+                        </Link>
                       ) : (
                         <button
                           key={index}
@@ -207,6 +215,15 @@ export default function Header() {
                           <Link
                             key={index}
                             href="/shamatube"
+                            className="block py-2 text-start text-sm text-muted-foreground hover:text-foreground"
+                            onClick={() => setIsMobileMenuOpen(false)}
+                          >
+                            {subItem}
+                          </Link>
+                        ) : subItem === "ShamilArticles" ? (
+                          <Link
+                            key={index}
+                            href="/shamil-articles"
                             className="block py-2 text-start text-sm text-muted-foreground hover:text-foreground"
                             onClick={() => setIsMobileMenuOpen(false)}
                           >
