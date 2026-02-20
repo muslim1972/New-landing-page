@@ -53,17 +53,22 @@ export default function Footer() {
       <div className="mx-auto flex max-w-[1440px] flex-col items-center gap-6 px-4 lg:flex-row lg:justify-between lg:px-6">
 
         {/* Logo Section */}
-        <Link href="/" className="shrink-0 flex items-center gap-3">
-          <div className="relative h-10 w-10 overflow-hidden rounded-full border border-border">
-            <Image
-              src="/images/Logo.png"
-              alt="Shamil App Logo"
-              fill
-              className="object-cover"
-            />
+        <Link href="/" className="shrink-0 flex flex-col items-center gap-1">
+          <div className="flex items-center gap-3">
+            <div className="relative h-10 w-10 overflow-hidden rounded-full border border-border">
+              <Image
+                src="/images/Logo.png"
+                alt="Shamil App Logo"
+                fill
+                className="object-cover"
+              />
+            </div>
+            <span className="text-xl font-bold italic text-foreground">
+              Shamil App
+            </span>
           </div>
-          <span className="text-xl font-bold italic text-foreground">
-            Shamil App
+          <span className="text-[10px] text-muted-foreground/60 font-mono" dir="ltr">
+            v1.4.3
           </span>
         </Link>
 
