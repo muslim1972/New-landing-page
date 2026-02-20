@@ -209,6 +209,18 @@ export default function Hero3D() {
                 <p className="text-sm md:text-base text-slate-400 mt-3 translate-z-5">
                     تحويل الأفكار المعقدة إلى واقع رقمي بسيط.
                 </p>
+
+                <a
+                    href="/apk/ShamilApp.apk"
+                    download
+                    className="mt-6 px-6 py-2 bg-sky-500/20 hover:bg-sky-500/30 text-sky-400 text-sm font-bold rounded-full border border-sky-500/50 transition-all duration-300 translate-z-8 flex items-center gap-2 group cursor-pointer pointer-events-auto"
+                >
+                    <span className="relative flex h-2 w-2">
+                        <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-sky-400 opacity-75"></span>
+                        <span className="relative inline-flex rounded-full h-2 w-2 bg-sky-500"></span>
+                    </span>
+                    Download Shamil App
+                </a>
             </div>
 
             <div className="absolute bottom-4 left-1/2 -translate-x-1/2 text-sky-400/40 text-[10px] tracking-[2px] z-20">

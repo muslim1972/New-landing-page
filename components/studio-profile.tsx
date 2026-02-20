@@ -31,12 +31,12 @@ export default function StudioProfile({
       <div className="mt-6 flex flex-col items-center text-center">
         <h2 className="text-xl font-bold text-foreground">{studioName}</h2>
         <p className="mt-1.5 text-sm text-muted-foreground">{tagline}</p>
-        <button
-          type="button"
+        <a
+          href="mailto:muslim@shamelapp.com"
           className="mt-5 rounded-full bg-primary px-7 py-2.5 text-sm font-medium text-primary-foreground transition-opacity hover:opacity-90"
         >
           Get in touch
-        </button>
+        </a>
       </div>
     </section>
   )

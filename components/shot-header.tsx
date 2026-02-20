@@ -80,12 +80,12 @@ export default function ShotHeader({
           >
             <Bookmark className="h-5 w-5 text-foreground" />
           </button>
-          <button
-            type="button"
+          <a
+            href="mailto:muslim@shamelapp.com"
             className="rounded-full bg-primary px-6 py-2.5 text-sm font-medium text-primary-foreground transition-opacity hover:opacity-90"
           >
             Get in touch
-          </button>
+          </a>
         </div>
       </div>
     </section>
