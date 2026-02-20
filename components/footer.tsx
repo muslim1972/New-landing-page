@@ -4,6 +4,7 @@ import Link from "next/link"
 import Image from "next/image"
 import { useLanguage } from "@/lib/language-context"
 import { CONTENT } from "@/lib/content"
+import versionData from "@/public/version.json"
 
 function GmailIcon({ className }: { className?: string }) {
   return (
@@ -68,7 +69,7 @@ export default function Footer() {
             </span>
           </div>
           <span className="text-[10px] text-muted-foreground/60 font-mono" dir="ltr">
-            v1.4.3
+            v{versionData.version}
           </span>
         </Link>
 
