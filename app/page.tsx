@@ -65,7 +65,7 @@ export default function Page() {
 
         <section className="relative mx-auto mt-8 max-w-[850px] px-4">
           <div className="overflow-hidden rounded-xl bg-secondary shadow-xl">
-            <div className="relative aspect-[4/3] w-full lg:aspect-[16/9]">
+            <div className="relative aspect-square w-full md:aspect-[4/3] lg:aspect-[16/9]">
               <Hero3D />
             </div>
           </div>
