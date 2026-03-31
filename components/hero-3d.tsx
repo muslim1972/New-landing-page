@@ -189,7 +189,7 @@ export default function Hero3D() {
 
             <div
                 ref={cardRef}
-                className="content-overlay absolute top-1/2 left-1/2 w-[55%] max-w-[350px] p-4 md:p-8 text-center text-white z-10 bg-slate-900/70 rounded-2xl backdrop-blur-md border border-sky-400/40 shadow-2xl transition-transform duration-100 ease-out flex flex-col items-center justify-center"
+                className="content-overlay absolute top-1/2 left-1/2 w-[55%] max-w-[350px] aspect-square p-2 md:p-8 text-center text-white z-10 bg-slate-900/70 rounded-2xl backdrop-blur-md border border-sky-400/40 shadow-2xl transition-transform duration-100 ease-out flex flex-col items-center justify-center md:aspect-auto"
                 style={{
                     transform: 'translate(-50%, -50%) rotateX(var(--rotate-x, 0deg)) rotateY(var(--rotate-y, 0deg))',
                     transformStyle: 'preserve-3d',
