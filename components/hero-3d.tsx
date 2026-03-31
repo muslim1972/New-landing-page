@@ -189,18 +189,18 @@ export default function Hero3D() {
 
             <div
                 ref={cardRef}
-                className="content-overlay absolute top-1/2 left-1/2 w-[90%] max-w-[350px] p-5 md:p-8 text-center text-white z-10 bg-slate-900/70 rounded-3xl backdrop-blur-md border border-sky-400/40 shadow-2xl transition-transform duration-100 ease-out flex flex-col items-center justify-center scale-90 min-[400px]:scale-95 md:scale-100"
+                className="content-overlay absolute top-1/2 left-1/2 w-[55%] max-w-[350px] p-4 md:p-8 text-center text-white z-10 bg-slate-900/70 rounded-2xl backdrop-blur-md border border-sky-400/40 shadow-2xl transition-transform duration-100 ease-out flex flex-col items-center justify-center"
                 style={{
                     transform: 'translate(-50%, -50%) rotateX(var(--rotate-x, 0deg)) rotateY(var(--rotate-y, 0deg))',
                     transformStyle: 'preserve-3d',
                     perspective: '1000px'
                 }}
             >
-                <div className="icon-carousel h-16 mb-4 flex justify-center items-center relative w-full">
-                    <BrainCircuit className={`absolute w-10 h-10 md:w-12 md:h-12 text-sky-400 transition-all duration-700 ${activeIcon === 0 ? 'opacity-100 scale-100 translate-z-12' : 'opacity-0 scale-50 translate-z-5'}`} />
-                    <Monitor className={`absolute w-10 h-10 md:w-12 md:h-12 text-sky-400 transition-all duration-700 ${activeIcon === 1 ? 'opacity-100 scale-100 translate-z-12' : 'opacity-0 scale-50 translate-z-5'}`} />
-                    <Code2 className={`absolute w-10 h-10 md:w-12 md:h-12 text-sky-400 transition-all duration-700 ${activeIcon === 2 ? 'opacity-100 scale-100 translate-z-12' : 'opacity-0 scale-50 translate-z-5'}`} />
-                    <Cpu className={`absolute w-10 h-10 md:w-12 md:h-12 text-sky-400 transition-all duration-700 ${activeIcon === 3 ? 'opacity-100 scale-100 translate-z-12' : 'opacity-0 scale-50 translate-z-5'}`} />
+                <div className="icon-carousel h-10 md:h-16 mb-2 md:mb-4 flex justify-center items-center relative w-full">
+                    <BrainCircuit className={`absolute w-8 h-8 md:w-12 md:h-12 text-sky-400 transition-all duration-700 ${activeIcon === 0 ? 'opacity-100 scale-100 translate-z-12' : 'opacity-0 scale-50 translate-z-5'}`} />
+                    <Monitor className={`absolute w-8 h-8 md:w-12 md:h-12 text-sky-400 transition-all duration-700 ${activeIcon === 1 ? 'opacity-100 scale-100 translate-z-12' : 'opacity-0 scale-50 translate-z-5'}`} />
+                    <Code2 className={`absolute w-8 h-8 md:w-12 md:h-12 text-sky-400 transition-all duration-700 ${activeIcon === 2 ? 'opacity-100 scale-100 translate-z-12' : 'opacity-0 scale-50 translate-z-5'}`} />
+                    <Cpu className={`absolute w-8 h-8 md:w-12 md:h-12 text-sky-400 transition-all duration-700 ${activeIcon === 3 ? 'opacity-100 scale-100 translate-z-12' : 'opacity-0 scale-50 translate-z-5'}`} />
                 </div>
 
                 <h1 className="text-lg md:text-2xl font-bold m-0 bg-gradient-to-r from-sky-400 via-indigo-400 to-sky-400 bg-[length:200%_auto] bg-clip-text text-transparent animate-shine translate-z-8">
@@ -213,7 +213,7 @@ export default function Hero3D() {
                 <a
                     href="/apk/ShamilApp.apk"
                     download
-                    className="mt-6 px-4 py-1.5 md:px-6 md:py-2 bg-sky-500/20 hover:bg-sky-500/30 text-sky-400 text-xs md:text-sm font-bold rounded-full border border-sky-500/50 transition-all duration-300 translate-z-8 flex items-center gap-2 group cursor-pointer pointer-events-auto"
+                    className="mt-4 px-3 py-1.5 md:px-6 md:py-2 bg-sky-500/20 hover:bg-sky-500/30 text-sky-400 text-[10px] md:text-sm font-bold rounded-full border border-sky-500/50 transition-all duration-300 translate-z-8 flex items-center gap-1.5 group cursor-pointer pointer-events-auto"
                 >
                     <span className="relative flex h-2 w-2">
                         <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-sky-400 opacity-75"></span>
