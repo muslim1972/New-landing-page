@@ -17,7 +17,9 @@ export default function InfTeleKarbalaPage() {
                 title: "InfTeleKarbala: Calculated Management",
                 subtitle: "The unified backbone for Administration, Finance, and Media.",
                 desc: "Transforming routine paper chaos into a streamlined, digital symphony. Real-time connections between every department and employee.",
-                cta: "Request Demo"
+                cta: "Launch Application",
+                appLink: "https://inf-tele-karbala.vercel.app/",
+                loginInfo: "Access the application to view its details using Username: tajribi 1, Password: 123456"
             },
             stats: [
                 { label: "Departments", value: "3+" },
@@ -47,7 +49,9 @@ export default function InfTeleKarbalaPage() {
                 title: "InfTeleKarbala: الإدارة المحسوبة",
                 subtitle: "العمود الفقري الموحد للإدارة، المالية، والإعلام.",
                 desc: "نحول الفوضى الورقية الروتينية إلى سيمفونية رقمية انسيابية. ربط فوري وشامل بين جميع الأقسام والموظفين.",
-                cta: "اطلب تجربة"
+                cta: "تشغيل التطبيق",
+                appLink: "https://inf-tele-karbala.vercel.app/",
+                loginInfo: "يمكنك الدخول إلى التطبيق للاطلاع على تفاصيله بواسطة اسم المستخدم: تجريبي 1، كلمة المرور: 123456"
             },
             stats: [
                 { label: "الأقسام المربوطة", value: "+٣" },
@@ -107,6 +111,30 @@ export default function InfTeleKarbalaPage() {
                         ))}
                     </div>
                 </div>
+
+                {/* Launch Application Section */}
+                <section className="container mx-auto px-4 py-12">
+                    <div className="bg-gradient-to-br from-blue-600 to-indigo-700 rounded-3xl p-8 md:p-12 shadow-2xl relative overflow-hidden group">
+                        <div className="absolute top-0 right-0 w-64 h-64 bg-white/10 rounded-full -translate-y-1/2 translate-x-1/2 blur-3xl group-hover:scale-110 transition-transform duration-700" />
+                        
+                        <div className="relative z-10 flex flex-col md:flex-row items-center justify-between gap-8 text-white">
+                            <div className="flex-1 space-y-4 text-center md:text-start">
+                                <h2 className="text-3xl md:text-4xl font-black">{t.hero.subtitle}</h2>
+                                <p className="text-blue-100 text-lg max-w-xl">
+                                    {t.hero.loginInfo}
+                                </p>
+                            </div>
+                            <Link 
+                                href={t.hero.appLink}
+                                target="_blank"
+                                className="inline-flex items-center gap-2 bg-white text-blue-600 px-8 py-4 rounded-full font-bold text-lg hover:bg-blue-50 transition-all hover:scale-105 active:scale-95 shadow-xl shrink-0"
+                            >
+                                {t.hero.cta}
+                                <ArrowRight className={`h-5 w-5 ${isAr ? 'rotate-180' : ''}`} />
+                            </Link>
+                        </div>
+                    </div>
+                </section>
 
                 {/* Core Modules */}
                 <section className="py-24 px-4 bg-slate-50">

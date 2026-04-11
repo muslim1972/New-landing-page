@@ -96,8 +96,8 @@ export const CONTENT = {
                 },
                 inftele: {
                     title: "InfTeleKarbala",
-                    subtitle: "Telecom Management",
-                    description: "Advanced technical solutions for managing telecommunications infrastructure.",
+                    subtitle: "Unified Management System",
+                    description: "Access the application to view its details using Username: tajribi 1, Password: 123456",
                 },
                 security: {
                     title: "Max Security",
@@ -219,8 +219,8 @@ export const CONTENT = {
                 },
                 inftele: {
                     title: "InfTeleKarbala",
-                    subtitle: "إدارة الاتصالات",
-                    description: "حلول تقنية متقدمة لإدارة البنية التحتية للاتصالات.",
+                    subtitle: "نظام الإدارة الموحد",
+                    description: "يمكنك الدخول إلى التطبيق للاطلاع على تفاصيله بواسطة اسم المستخدم: تجريبي 1، كلمة المرور: 123456",
                 },
                 security: {
                     title: "حماية قصوى",

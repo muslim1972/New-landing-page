@@ -48,7 +48,7 @@ export default function AppsPage() {
             description: text.items.inftele.description,
             icon: <Smartphone className="h-6 w-6" />,
             color: "bg-white border-2 border-slate-100 text-slate-900",
-            href: "#",
+            href: "/inftelekarbala",
         },
         {
             id: "security-feature",
