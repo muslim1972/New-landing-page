@@ -11,16 +11,16 @@ const inter = Inter({
 })
 
 export const metadata: Metadata = {
-  title: "Dribbble - Portfolio Shot",
+  title: "شامل آب | المنظومة الرقمية الذكية",
   description:
-    "Marketing Experience Challenge - Ibizan Hounds by Studio Termini",
+    "منظومة شامل الرقمية المتكاملة - نقدم تطبيقات ذكية وآمنة بمفهوم جديد للخصوصية والأداء، تشمل شامل شات وشاغرام ونظام الاتصالات الموحد لكربلاء.",
   icons: {
     icon: '/images/Logo.png',
   },
 }
 
 export const viewport: Viewport = {
-  themeColor: "#2b2049",
+  themeColor: "#030712",
   width: "device-width",
   initialScale: 1,
 }

@@ -81,7 +81,7 @@ export default function InfTeleKarbalaPage() {
     const t = content[language]
 
     return (
-        <div className={`min-h-screen bg-slate-50 text-slate-900 ${isAr ? 'rtl' : 'ltr'}`} dir={isAr ? 'rtl' : 'ltr'}>
+        <div className={`min-h-screen bg-background text-foreground transition-colors duration-300 ${isAr ? 'rtl' : 'ltr'}`} dir={isAr ? 'rtl' : 'ltr'}>
             <Header />
 
             <main className="overflow-x-hidden">
@@ -102,11 +102,11 @@ export default function InfTeleKarbalaPage() {
 
                 {/* Stats Bar */}
                 <div className="container mx-auto px-4 py-8">
-                    <div className="bg-white border border-slate-200 rounded-2xl shadow-xl p-8 flex flex-col md:flex-row justify-around items-center gap-8 text-center">
+                    <div className="bg-card dark:bg-slate-900/50 backdrop-blur-md border border-border/80 rounded-2xl shadow-xl p-8 flex flex-col md:flex-row justify-around items-center gap-8 text-center transition-colors duration-300">
                         {t.stats.map((stat, idx) => (
                             <div key={idx} className="flex flex-col gap-1">
-                                <span className="text-3xl md:text-4xl font-bold text-blue-600">{stat.value}</span>
-                                <span className="text-sm font-semibold text-slate-500 uppercase tracking-wider">{stat.label}</span>
+                                <span className="text-3xl md:text-4xl font-bold text-blue-600 dark:text-blue-400">{stat.value}</span>
+                                <span className="text-sm font-semibold text-slate-500 dark:text-slate-400 uppercase tracking-wider">{stat.label}</span>
                             </div>
                         ))}
                     </div>
@@ -137,16 +137,16 @@ export default function InfTeleKarbalaPage() {
                 </section>
 
                 {/* Core Modules */}
-                <section className="py-24 px-4 bg-slate-50">
+                <section className="py-24 px-4 bg-slate-50/50 dark:bg-slate-950/40 transition-colors duration-300">
                     <div className="container mx-auto max-w-[1200px]">
                         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                             {t.modules.map((mod, idx) => (
-                                <div key={idx} className="bg-white p-8 rounded-2xl shadow-sm border border-slate-100 hover:shadow-xl transition-all hover:-translate-y-2 group">
-                                    <div className="w-16 h-16 rounded-2xl bg-slate-100 text-blue-600 flex items-center justify-center mb-6 group-hover:bg-blue-600 group-hover:text-white transition-colors">
+                                <div key={idx} className="bg-card dark:bg-slate-900/40 backdrop-blur-md p-8 rounded-2xl shadow-sm border border-border hover:shadow-xl dark:hover:shadow-blue-950/30 transition-all duration-300 hover:-translate-y-2 group">
+                                    <div className="w-16 h-16 rounded-2xl bg-slate-100 dark:bg-slate-800/80 text-blue-600 dark:text-blue-400 flex items-center justify-center mb-6 group-hover:bg-blue-600 group-hover:text-white dark:group-hover:bg-blue-500 transition-colors">
                                         <mod.icon className="w-8 h-8" />
                                     </div>
-                                    <h3 className="text-2xl font-bold mb-3 text-slate-800">{mod.title}</h3>
-                                    <p className="text-slate-600 leading-relaxed">{mod.desc}</p>
+                                    <h3 className="text-2xl font-bold mb-3 text-slate-800 dark:text-slate-100">{mod.title}</h3>
+                                    <p className="text-slate-600 dark:text-slate-350 leading-relaxed">{mod.desc}</p>
                                 </div>
                             ))}
                         </div>
@@ -154,7 +154,7 @@ export default function InfTeleKarbalaPage() {
                 </section>
 
                 {/* Detailed Features */}
-                <section className="py-24 bg-slate-900 text-white relative overflow-hidden">
+                <section className="py-24 bg-slate-900 dark:bg-[#070b18] text-white relative overflow-hidden border-t border-b border-slate-800/50 transition-colors duration-300">
                     {/* Abstract Shapes */}
                     <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-blue-500/10 rounded-full blur-[100px]" />
                     <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-purple-500/10 rounded-full blur-[100px]" />
@@ -197,9 +197,9 @@ export default function InfTeleKarbalaPage() {
                 </section>
 
                 {/* Gallery Grid */}
-                <section className="py-24 px-4 bg-slate-50">
+                <section className="py-24 px-4 bg-slate-50/50 dark:bg-slate-950/40 transition-colors duration-300">
                     <div className="container mx-auto max-w-[1440px]">
-                        <h2 className="text-3xl font-bold text-center mb-16 text-slate-800">{t.gallery.title}</h2>
+                        <h2 className="text-3xl font-bold text-center mb-16 text-slate-800 dark:text-slate-100">{t.gallery.title}</h2>
                         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
                             {[3, 4, 5, 6, 7, 8, 9, 10].map((num) => (
                                 <div key={num} className="group relative aspect-video rounded-xl overflow-hidden shadow-md cursor-pointer">

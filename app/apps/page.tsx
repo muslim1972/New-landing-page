@@ -28,7 +28,7 @@ export default function AppsPage() {
             subtitle: text.items.shamil.subtitle,
             description: text.items.shamil.description,
             icon: <LayoutGrid className="h-8 w-8" />,
-            color: "bg-slate-900 text-white",
+            color: "bg-slate-950 text-white border border-slate-800",
             href: "https://shamelapp.com/dashboard",
             hasImage: true,
         },
@@ -37,7 +37,7 @@ export default function AppsPage() {
             size: "small", // 1x1
             title: text.stats.users,
             subtitle: "",
-            color: "bg-teal-500 text-white",
+            color: "bg-teal-500 dark:bg-teal-600 text-white",
             icon: <Globe className="h-6 w-6" />,
         },
         {
@@ -47,7 +47,7 @@ export default function AppsPage() {
             subtitle: text.items.inftele.subtitle,
             description: text.items.inftele.description,
             icon: <Smartphone className="h-6 w-6" />,
-            color: "bg-white border-2 border-slate-100 text-slate-900",
+            color: "bg-white dark:bg-slate-900 border border-slate-200/60 dark:border-slate-800 text-slate-900 dark:text-white",
             href: "/inftelekarbala",
         },
         {
@@ -55,7 +55,7 @@ export default function AppsPage() {
             size: "small", // 1x1
             title: text.items.security.title,
             subtitle: text.items.security.subtitle,
-            color: "bg-slate-100 text-slate-600",
+            color: "bg-slate-100 dark:bg-slate-900/60 text-slate-700 dark:text-slate-300 border border-slate-200/50 dark:border-slate-800/80",
             icon: <Lock className="h-6 w-6" />,
         },
         {
@@ -71,7 +71,7 @@ export default function AppsPage() {
             size: "small",
             title: text.items.performance.title,
             subtitle: text.items.performance.subtitle,
-            color: "bg-slate-900 text-white",
+            color: "bg-slate-950 text-white border border-slate-800",
             icon: <Zap className="h-6 w-6" />,
         },
         {
@@ -79,7 +79,7 @@ export default function AppsPage() {
             size: "wide",
             title: text.items.ad.title,
             subtitle: text.items.ad.subtitle,
-            color: "bg-slate-200 text-slate-400",
+            color: "bg-slate-200/70 dark:bg-slate-900/40 text-slate-500 dark:text-slate-450 border border-slate-200/30 dark:border-slate-800/50",
             icon: <ArrowUpRight className="h-6 w-6" />,
         },
     ]

@@ -83,8 +83,7 @@ export const CONTENT = {
                 { label: "Cookies", href: "#" },
             ],
             bottomRightLinks: []
-        }
-        ,
+        },
         apps: {
             title: "Digital Innovation Portal",
             subtitle: "Discover an integrated ecosystem of applications designed to elevate efficiency and change the game.",
@@ -120,6 +119,75 @@ export const CONTENT = {
                 users: "+50K Active Users",
                 addIdea: "Add your idea"
             }
+        },
+        ecosystem: {
+            title: "Shamil Creative Suite",
+            subtitle: "An integrated digital ecosystem built to reshape communication, management, and media sharing with complete privacy.",
+            demoTitle: "Demo Credentials",
+            usernameLabel: "Username",
+            passwordLabel: "Password",
+            copyBtn: "Copy",
+            copiedMsg: "Copied!",
+            apps: [
+                {
+                    id: "shamil",
+                    title: "Shamil App",
+                    subtitle: "Integrated Management",
+                    description: "A comprehensive platform to manage resources, logs, and processes with ultimate speed and security.",
+                    href: "https://shamelapp.com/dashboard",
+                    iconName: "LayoutGrid",
+                    color: "cyan",
+                },
+                {
+                    id: "shamilchat",
+                    title: "ShamilChat",
+                    subtitle: "Secured Chat",
+                    description: "End-to-end encrypted messaging, voice, and high-fidelity video calling designed to preserve your absolute privacy.",
+                    href: "/shamil-chat",
+                    iconName: "MessageSquare",
+                    color: "indigo",
+                },
+                {
+                    id: "inftele",
+                    title: "InfTeleKarbala",
+                    subtitle: "Unified Service System",
+                    description: "Integrated communication and services network dedicated to Karbala, providing instant reporting and service updates.",
+                    href: "/inftelekarbala",
+                    iconName: "PhoneCall",
+                    color: "emerald",
+                    demoCredentials: {
+                        username: "tajribi 1",
+                        password: "123456"
+                    }
+                },
+                {
+                    id: "shagram",
+                    title: "ShaGram",
+                    subtitle: "Creative Social",
+                    description: "Share your life's moments through rich slide shows, videos, and professional macro editing, directly on your phone.",
+                    href: "/shagram",
+                    iconName: "Camera",
+                    color: "violet",
+                },
+                {
+                    id: "shamatube",
+                    title: "ShamaTube",
+                    subtitle: "Video Sharing",
+                    description: "Explore, upload, and interact with micro-videos and stories in an engaging, lightning-fast platform.",
+                    href: "/shamatube",
+                    iconName: "Play",
+                    color: "rose",
+                },
+                {
+                    id: "shamilarticles",
+                    title: "ShamilArticles",
+                    subtitle: "Knowledge Hub",
+                    description: "Write, discover, and read rich interactive articles and professional blogs within a growing community of writers.",
+                    href: "/shamil-articles",
+                    iconName: "BookOpen",
+                    color: "amber",
+                }
+            ]
         }
     },
     ar: {
@@ -206,8 +274,7 @@ export const CONTENT = {
                 { label: "ملفات تعريف الارتباط", href: "#" },
             ],
             bottomRightLinks: []
-        }
-        ,
+        },
         apps: {
             title: "بوابة الإبداع الرقمي",
             subtitle: "اكتشف نظاماً بيئياً متكاملاً من التطبيقات المصممة لرفع الكفاءة وتغيير قواعد اللعبة.",
@@ -231,7 +298,7 @@ export const CONTENT = {
                     subtitle: "سرعة استجابة عالية",
                 },
                 future: {
-                    title: "مشروع قادم",
+                    title: "مشروع قائم",
                     subtitle: "قريباً",
                 },
                 ad: {
@@ -243,6 +310,75 @@ export const CONTENT = {
                 users: "+50 ألف مستخدم نشط",
                 addIdea: "أضف فكرتك"
             }
+        },
+        ecosystem: {
+            title: "منظومة شامل الرقمية الذكية",
+            subtitle: "نظام بيئي رقمي متكامل مصمم لإعادة صياغة التواصل، الإدارة، ومشاركة الوسائط بخصوصية مطلقة وأداء لا يضاهى.",
+            demoTitle: "بيانات الحساب التجريبي",
+            usernameLabel: "اسم المستخدم",
+            passwordLabel: "كلمة المرور",
+            copyBtn: "نسخ",
+            copiedMsg: "تم النسخ!",
+            apps: [
+                {
+                    id: "shamil",
+                    title: "شامل آب",
+                    subtitle: "الإدارة المتكاملة",
+                    description: "منصة شاملة لإدارة الموارد، العمليات، والسجلات بأقصى سرعة وأعلى حماية رقمية.",
+                    href: "https://shamelapp.com/dashboard",
+                    iconName: "LayoutGrid",
+                    color: "cyan",
+                },
+                {
+                    id: "shamilchat",
+                    title: "شامل شات",
+                    subtitle: "المحادثة الآمنة",
+                    description: "تراسل فوري، مكالمات صوتية ومرئية عالية الدقة مشفرة بالكامل لحماية خصوصيتك المطلقة.",
+                    href: "/shamil-chat",
+                    iconName: "MessageSquare",
+                    color: "indigo",
+                },
+                {
+                    id: "inftele",
+                    title: "InfTeleKarbala",
+                    subtitle: "نظام الاتصال الموحد",
+                    description: "منظومة اتصالات وخدمات متكاملة مخصصة لمدينة كربلاء المقدسة، تضمن إرسال التقارير وتنسيق الخدمات فورا.",
+                    href: "/inftelekarbala",
+                    iconName: "PhoneCall",
+                    color: "emerald",
+                    demoCredentials: {
+                        username: "tajribi 1",
+                        password: "123456"
+                    }
+                },
+                {
+                    id: "shagram",
+                    title: "شاغرام",
+                    subtitle: "التواصل الإبداعي",
+                    description: "شارك لحظات حياتك اليومية بالصور والفيديو وأدوات مونتاج احترافية مدمجة مخصصة للهواتف.",
+                    href: "/shagram",
+                    iconName: "Camera",
+                    color: "violet",
+                },
+                {
+                    id: "shamatube",
+                    title: "شاماتوب",
+                    subtitle: "مشاركة الفيديو",
+                    description: "شاهد، تفاعل، وانشر فيديوهات قصيرة وقصص تفاعلية سريعة في منصة مرئية مبهرة وسريعة الاستجابة.",
+                    href: "/shamatube",
+                    iconName: "Play",
+                    color: "rose",
+                },
+                {
+                    id: "shamilarticles",
+                    title: "شامل أرتيكلز",
+                    subtitle: "المقالات والمعرفة",
+                    description: "اكتب، تصفح، واقرأ مقالات معرفية وتدوينات غنية بتفاعل سلس ضمن مجتمع متميز من الكتاب والمفكرين.",
+                    href: "/shamil-articles",
+                    iconName: "BookOpen",
+                    color: "amber",
+                }
+            ]
         }
     }
 }
